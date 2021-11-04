@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="SunnyDataSet" targetNamespace="http://tempuri.org/SunnyDataSet.xsd" xmlns:mstns="http://tempuri.org/SunnyDataSet.xsd" xmlns="http://tempuri.org/SunnyDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SunnyConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SunnyConnectionString1 (Settings)" PropertyReference="ApplicationSettings.BaiThucHanh2.Properties.Settings.GlobalReference.Default.SunnyConnectionString1" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="transactionsViewTableAdapter" GeneratorDataComponentClassName="transactionsViewTableAdapter" Name="transactionsView" UserDataComponentName="transactionsViewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SunnyConnectionString1 (Settings)" DbObjectName="transactionsView" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID, date_created, cash, is_delivered, total FROM transactionsView</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="ID" DataSetColumn="ID" />
+              <Mapping SourceColumn="date_created" DataSetColumn="date_created" />
+              <Mapping SourceColumn="cash" DataSetColumn="cash" />
+              <Mapping SourceColumn="is_delivered" DataSetColumn="is_delivered" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="SunnyDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SunnyDataSet" msprop:Generator_UserDSName="SunnyDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="transactionsView" msprop:Generator_TableClassName="transactionsViewDataTable" msprop:Generator_TableVarName="tabletransactionsView" msprop:Generator_TablePropName="transactionsView" msprop:Generator_RowDeletingName="transactionsViewRowDeleting" msprop:Generator_RowChangingName="transactionsViewRowChanging" msprop:Generator_RowEvHandlerName="transactionsViewRowChangeEventHandler" msprop:Generator_RowDeletedName="transactionsViewRowDeleted" msprop:Generator_UserTableName="transactionsView" msprop:Generator_RowChangedName="transactionsViewRowChanged" msprop:Generator_RowEvArgName="transactionsViewRowChangeEvent" msprop:Generator_RowClassName="transactionsViewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
+              <xs:element name="date_created" msprop:Generator_ColumnVarNameInTable="columndate_created" msprop:Generator_ColumnPropNameInRow="date_created" msprop:Generator_ColumnPropNameInTable="date_createdColumn" msprop:Generator_UserColumnName="date_created" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cash" msprop:Generator_ColumnVarNameInTable="columncash" msprop:Generator_ColumnPropNameInRow="cash" msprop:Generator_ColumnPropNameInTable="cashColumn" msprop:Generator_UserColumnName="cash" type="xs:decimal" minOccurs="0" />
+              <xs:element name="is_delivered" msprop:Generator_ColumnVarNameInTable="columnis_delivered" msprop:Generator_ColumnPropNameInRow="is_delivered" msprop:Generator_ColumnPropNameInTable="is_deliveredColumn" msprop:Generator_UserColumnName="is_delivered" type="xs:boolean" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:transactionsView" />
+      <xs:field xpath="mstns:ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
